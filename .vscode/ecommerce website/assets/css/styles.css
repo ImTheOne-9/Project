@@ -1188,6 +1188,12 @@ table{
   accent-color: var(--first-color);
 }
 
+.error{
+  color: red;
+  font-size: var(--small-font-size);
+  font-family: var(--body-font);
+  display: none;
+}
 /* Account */
 .account__container{
   grid-template-columns: 4fr 8fr;
