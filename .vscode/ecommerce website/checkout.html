@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--=============== FLATICON ===============-->
-    <link rel="stylesheet" href />
+    <link rel='stylesheet'
+      href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
 
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href />
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script
-      src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
 
     <title>Ecommerce Website</title>
   </head>
@@ -44,6 +42,15 @@
         </a>
 
         <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="assets/img/logo.svg" alt>
+            </a>
+
+            <div class="nav__close" id="nav-close">
+              <i class="fi-rs-cross-small"></i>
+            </div>
+          </div>
           <ul class="nav__list">
             <li class="nav__item">
               <a href="index.html" class="nav__link active-link">Home</a>
@@ -54,7 +61,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="account.html" class="nav__link">My Account</a>
+              <a href="accounts.html" class="nav__link">My Account</a>
             </li>
 
             <li class="nav__item">
@@ -62,7 +69,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="login.html" class="nav__link">Login</a>
+              <a href="login-register.html" class="nav__link">Login</a>
             </li>
           </ul>
 
@@ -72,7 +79,7 @@
               placeholder="Search products..."
               class="form__input" />
             <button class="search__btn">
-              <i class="bx bx-search"></i>
+              <i class="fi-rs-search"></i>
             </button>
           </div>
         </div>
@@ -87,6 +94,10 @@
             <img src="assets/img/icon-cart.svg" alt>
             <span class="count">3</span>
           </a>
+
+          <div class="header__action-btn nav__toogle" id="nav-toogle">
+            <img src="assets/img/menu-burger.svg" alt>
+          </div>
         </div>
 
       </nav>
@@ -95,10 +106,161 @@
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== BREADCRUMB ===============-->
-      <section class="breadcrumb"></section>
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><span class="breadcrumb__link">>></span></li>
+          <li><span class="breadcrumb__link">Shop</span></li>
+          <li><span class="breadcrumb__link">>></span></li>
+          <li><span class="breadcrumb__link">Checkout</span></li>
+        </ul>
+      </section>
 
       <!--=============== CHECKOUT ===============-->
-      <section class="checkout"></section>
+      <section class="checkout section--lg">
+        <div class="checkout__container container grid">
+          <div class="checkout__group">
+            <h3 class="section__title">Billing Details</h3>
+
+            <form action class="form grid">
+              <input type="text" name="name" id="txtName"
+                placeholder="Your Name..." class="form__input">
+              <input type="text" name="address" id="txtAddress"
+                placeholder="Your Address..." class="form__input">
+              <input type="text" name="city" id="txtCity"
+                placeholder="Your postcode..." class="form__input">
+              <input type="text" name="postcode" id="txtPostcode"
+                placeholder="Your phone..." class="form__input">
+              <input type="text" name="phone" id="txtPhone"
+                placeholder="Your Phonenumber..." class="form__input">
+              <input type="email" name="email" id="txtEmail"
+                placeholder="Your Email..." class="form__input">
+
+              <h3 class="section__title">Additional Information</h3>
+              <textarea
+                name="notes" id="txtNotes"
+                placeholder="Your Order Notes..."
+                class="form__input textarea"
+                cols="30" rows="10">
+              </textarea>
+            </form>
+          </div>
+
+          <div class="checkout__group">
+            <h3 class="section__title">Cart Totals</h3>
+
+            <table class="order__table">
+              <tr>
+                <th colspan="2">Products</th>
+                <th>Totals</th>
+              </tr>
+
+              <tr>
+                <td>
+                  <img
+                    src="assets/img/product-8-1.jpg"
+                    alt
+                    class="order__img">
+                </td>
+
+                <td>
+                  <h3 class="table__title">Colorful Pattern Shirts</h3>
+                  <p class="order__quantity">x2</p>
+                </td>
+
+                <td>
+                  <span class="order__price">$180.00</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <img
+                    src="assets/img/product-8-1.jpg"
+                    alt
+                    class="order__img">
+                </td>
+
+                <td>
+                  <h3 class="table__title">Colorful Pattern Shirts</h3>
+                  <p class="order__quantity">x2</p>
+                </td>
+
+                <td>
+                  <span class="order__price">$180.00</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <img
+                    src="assets/img/product-8-1.jpg"
+                    alt
+                    class="order__img">
+                </td>
+
+                <td>
+                  <h3 class="table__title">Colorful Pattern Shirts</h3>
+                  <p class="order__quantity">x2</p>
+                </td>
+
+                <td>
+                  <span class="order__price">$180.00</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="order__subtitle">SubTotal</span></td>
+                <td colspan="2"><span class="order__price">$280.00</span></td>
+              </tr>
+
+              <tr>
+                <td><span class="order__subtitle">Shipping</span></td>
+                <td colspan="2"><span class="order__price">Free
+                    Shipping</span></td>
+              </tr>
+
+              <tr>
+                <td><span class="order__subtitle">Total</span></td>
+                <td colspan="2"><span
+                    class="order__grand-total">$280.00</span></td>
+              </tr>
+            </table>
+
+            <div class="payment__method">
+              <h3 class="checkout__title payment__title">Payment</h3>
+
+              <div class="payment__option flex">
+                <input
+                  type="radio"
+                  name="radio"
+                  class="payment__input"
+                  id="btnDBank">
+                <label
+                  for="btnDBank"
+                  class="payment__label">
+                  Direct BankTransfer
+                </label>
+              </div>
+
+              <div class="payment__option flex">
+                <input
+                  type="radio"
+                  name="radio"
+                  class="payment__input"
+                  id="btnPay">
+                <label
+                  for="btnPay"
+                  class="payment__label">
+                  Check Payment
+                </label>
+              </div>
+            </div>
+
+            <button class="btn btn--md">Place Order</button>
+          </div>
+        </div>
+      </section>
 
       <!--=============== NEWSLETTER ===============-->
       <section class="newsletter"></section>
@@ -209,6 +371,8 @@
     <script src></script>
 
     <!--=============== MAIN JS ===============-->
-    <script src></script>
+    <script
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

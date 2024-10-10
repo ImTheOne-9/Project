@@ -13,9 +13,6 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script
-      src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
 
     <title>Ecommerce Website</title>
   </head>
@@ -45,6 +42,15 @@
         </a>
 
         <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="assets/img/logo.svg" alt>
+            </a>
+
+            <div class="nav__close" id="nav-close">
+              <i class="fi-rs-cross-small"></i>
+            </div>
+          </div>
           <ul class="nav__list">
             <li class="nav__item">
               <a href="index.html" class="nav__link active-link">Home</a>
@@ -55,7 +61,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="account.html" class="nav__link">My Account</a>
+              <a href="accounts.html" class="nav__link">My Account</a>
             </li>
 
             <li class="nav__item">
@@ -63,7 +69,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="login.html" class="nav__link">Login</a>
+              <a href="login-register.html" class="nav__link">Login</a>
             </li>
           </ul>
 
@@ -73,7 +79,7 @@
               placeholder="Search products..."
               class="form__input" />
             <button class="search__btn">
-              <i class="bx bx-search"></i>
+              <i class="fi-rs-search"></i>
             </button>
           </div>
         </div>
@@ -88,6 +94,10 @@
             <img src="assets/img/icon-cart.svg" alt>
             <span class="count">3</span>
           </a>
+
+          <div class="header__action-btn nav__toogle" id="nav-toogle">
+            <img src="assets/img/menu-burger.svg" alt>
+          </div>
         </div>
 
       </nav>
@@ -96,10 +106,155 @@
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== BREADCRUMB ===============-->
-      <section class="breadcrumb"></section>
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><span class="breadcrumb__link">>></span></li>
+          <li><span class="breadcrumb__link">Shop</span></li>
+          <li><span class="breadcrumb__link">>></span></li>
+          <li><span class="breadcrumb__link">Account</span></li>
+        </ul>
+      </section>
 
       <!--=============== ACCOUNTS ===============-->
-      <section class="accounts"></section>
+      <section class="accounts section--lg">
+        <div class="account__container container grid">
+          <div class="account__tabs">
+            <p class="account__tab active-tab" data-target="#dashboard">
+              <i class="fi-rs-settings-sliders"></i> Dashboard
+            </p>
+
+            <p class="account__tab" data-target="#orders">
+              <i class="fi-rs-shopping-bag"></i> Orders
+            </p>
+
+            <p class="account__tab" data-target="#update-profile">
+              <i class="fi-rs-user"></i> Update Profile
+            </p>
+
+            <p class="account__tab" data-target="#address">
+              <i class="fi-rs-marker"></i> My Address
+            </p>
+
+            <p class="account__tab" data-target="#change-password">
+              <i class="fi-rs-user"></i> Change Password
+            </p>
+
+            <p class="account__tab">
+              <i class="fi-rs-exit"></i> Logout
+            </p>
+          </div>
+
+          <div class="tabs__content">
+            <div class="tab__content active-tab" content id="dashboard">
+              <h3 class="tab__header">Hello!</h3>
+
+              <div class="tab__body">
+                <div class="tab__description">
+                  From your account dashboard, you can easily check & view your
+                  recent orders, manage your shipping and billing addresses and
+                  eit your password and account details
+                </div>
+              </div>
+            </div>
+
+            <div class="tab__content" content id="orders">
+              <h3 class="tab__header">Your Orders</h3>
+
+              <div class="tab__body">
+                <table class="placed__order-table">
+                  <tr>
+                    <th>Orders</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                  </tr>
+
+                  <tr>
+                    <td>#1357</td>
+                    <td>8/10/2024</td>
+                    <td>Processing</td>
+                    <td>$125.00</td>
+                    <td><a href="#" class="view_order">View</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>#1337</td>
+                    <td>8/10/2024</td>
+                    <td>Processing</td>
+                    <td>$125.00</td>
+                    <td><a href="#" class="view_order">View</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>#1781</td>
+                    <td>8/10/2024</td>
+                    <td>Processing</td>
+                    <td>$125.00</td>
+                    <td><a href="#" class="view_order">View</a></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab__content" content id="update-profile">
+              <h3 class="tab__header">Update Profile</h3>
+
+              <div class="tab__body">
+                <form action class="form grid">
+                  <input type="text" name="username" id="txtUsername"
+                    placeholder="Username" class="form__input">
+
+                  <div class="form__btn">
+                    <button class="btn btn--md">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="tab__content" content id="address">
+              <h3 class="tab__header">Shipping Address</h3>
+
+              <div class="tab__body">
+                <address class="address">
+                  69 Dinh Cong, Hoang Mai
+                </address>
+
+                <p class="city">Hanoi</p>
+                <a href class="edit">Edit</a>
+              </div>
+            </div>
+
+            <div class="tab__content" content id="change-password">
+              <h3 class="tab__header">Change Password</h3>
+
+              <div class="tab__body">
+                <form action class="form grid">
+                  <input
+                    type="password"
+                    placeholder="Current Password"
+                    class="form__input" />
+
+                  <input
+                    type="password"
+                    placeholder="New Password"
+                    class="form__input" />
+
+                  <input
+                    type="password"
+                    placeholder="Comfirm Password"
+                    class="form__input" />
+
+                  <div class="form__btn">
+                    <button class="btn btn--md">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--=============== NEWSLETTER ===============-->
       <section class="newsletter"></section>
@@ -210,6 +365,8 @@
     <script src></script>
 
     <!--=============== MAIN JS ===============-->
-    <script src></script>
+    <script
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

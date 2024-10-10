@@ -1,11 +1,21 @@
 /*=============== SHOW MENU ===============*/
-
+const navMenu = document.getElementById('nav-menu'),
+    navToogle = document.getElementById('nav-toogle'),
+    navClose = document.getElementById('nav-close');
 /*===== Menu Show =====*/
 /* Validate if constant exists */
-
+if (navToogle){
+    navToogle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+    });
+}
 /*===== Hide Show =====*/
 /* Validate if constant exists */
-
+if (navClose){
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    });
+}
 /*=============== IMAGE GALLERY ===============*/
 function imgGallery(){
     const mainImg = document.querySelector('.details__img'),
@@ -24,8 +34,8 @@ function imgGallery(){
 
 /*=============== PRODUCTS TABS ===============*/
 document.addEventListener("DOMContentLoaded", () => {
-    const tabs = document.querySelectorAll('.tab__btn'),
-          tabContents = document.querySelectorAll('.tab__item');
+    const tabs = document.querySelectorAll('[data-target]'),
+          tabContents = document.querySelectorAll('[content]');
 
     tabs.forEach((tab) => {
         tab.addEventListener('click', () => {
